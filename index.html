@@ -6,40 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-   <link type="text/css" href="styles.css"rel="stylesheet">
+   <link type="text/css" href="./styles/styles.css"rel="stylesheet">
 </head>
-<body onload="init();">
+<body>
+    <header>
+        <h2>Calculadora V2</h2>
+    </header>
+    <div class="container-calculator">
     <table class="Calculadora">
         <tr>
-            <td colspan="4"><span id="resultado"></span></td>
+            <td class="screen" colspan="4"><span id="result">0</span></td>
+            <tr>
+                <td class="empty" colspan="4"></td>
+            </tr>
         </tr>
         <tr>
-            <td><button id="siete">7</button></td>
-            <td><button id="ocho">8</button></td>
-            <td><button id="nueve">9</button></td>
-            <td><button id="reset">C</button></td>
+            <td><button id="siete" onclick="add('7')">7</button></td>
+            <td><button id="ocho" onclick="add('8')">8</button></td>
+            <td><button id="nueve" onclick="add('9')">9</button></td>
+            <td><button id="reset" onclick="clean('C')">C</button></td>
         </tr>
         <tr>
-            <td><button id="cuatro">4</button></td>
-            <td><button id="cinco">5</button></td>
-            <td><button id="seis">6</button></td>
-            <td><button id="multiplicacion">*</button></td>   
+            <td><button id="cuatro" onclick="add('4')">4</button></td>
+            <td><button id="cinco" onclick="add('5')">5</button></td>
+            <td><button id="seis" onclick="add('6')">6</button></td>
+            <td><button id="multiplicacion" onclick="add('*')">*</button></td>   
         </tr>
         <tr>
-            <td><button id="uno">1</button></td>
-            <td><button id="dos">2</button></td>
-            <td><button id="tres">3</button></td>
-            <td><button id="resta">-</button></td>
+            <td><button id="uno" onclick="add('1')">1</button></td>
+            <td><button id="dos" onclick="add('2')">2</button></td>
+            <td><button id="tres" onclick="add('3')">3</button></td>
+            <td><button id="resta" onclick="add('-')">-</button></td>
         </tr>
         <tr>
-            <td><button id="igual">=</button></td>
-            <td><button id="division">/</button></td>
-            <td><button id="cero">0</button></td>
-            <td><button id="suma">+</button></td>
+            <td><button id="igual" onclick="calculate('=')">=</button></td>
+            <td><button id="division" onclick="add('/')">/</button></td>
+            <td><button id="cero" onclick="add('0')">0</button></td>
+            <td><button id="suma" onclick="add('+')">+</button></td>
         </tr>
  
     </table>
-        
+</div>  
  <script src="./js/script.js"></script>
     
 
